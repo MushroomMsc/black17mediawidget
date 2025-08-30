@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Black 17 Media Widget</title>
   <style>
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+    }
+
     .rotating-img {
-      width: 150px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40vw;
+      max-width: 300px;
       height: auto;
       animation: spin 12s linear infinite;
     }
 
     @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .center-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
-
-  <div class="center-wrapper" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
-    <img class="rotating-img" src="https://i.ibb.co/r2tgvvZd/black17.png" alt="Black 17 Logo">
+  <div class="wrapper">
+    <img class="rotating-img" src="https://i.ibb.co/r2tgvvZd/black17.png" alt="Record">
   </div>
-
 </body>
 </html>
