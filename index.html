@@ -2,42 +2,24 @@
 <html>
 <head>
   <style>
-    /*
-     * This section controls the overall page behavior and scrollbars.
-     * Setting overflow to hidden is crucial for preventing a scrollbar
-     * from appearing inside the embed frame.
-     */
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      overflow: hidden; /* Prevents scrollbars on the page */
     }
 
-    /*
-     * This wrapper acts as the "viewing window" for your logo.
-     * It's where the clipping happens.
-     */
     .wrapper {
       width: 100%;
-      /* Adjust this height to control the amount of clipping.
-         A smaller value clips more of the bottom of the logo. */
-      height: 150px;
+      height: 150px; /* Adjust this value to control how much of the logo is visible */
       position: relative;
-      overflow: hidden; /* This is what clips the image */
+      overflow: hidden; /* This is what clips the content */
     }
 
-    /*
-     * This is the logo itself.
-     * Its position is relative to the wrapper.
-     */
     .rotating-img {
       position: absolute;
-      /* By setting top: 0, the logo is anchored to the top of the wrapper,
-         causing the bottom to be clipped. */
-      top: 0;
+      bottom: 0; /* This anchors the logo to the bottom of the wrapper */
       left: 50%;
-      transform: translateX(-50%); /* Keeps the logo horizontally centered */
-      /* These values control the size of the logo itself */
+      transform: translateX(-50%); /* Centers the logo horizontally */
       width: 40vw;
       max-width: 300px;
       height: auto;
